@@ -1,0 +1,123 @@
+/* ==========================================================
+   Q'Massa – Estilos globais + Home
+   Paleta tirada da logomarca: dourado sobre off-white e marrom-escuro
+   ========================================================== */
+:root{
+  --ouro:#D4AF37; --ouro2:#C5A059; --ouro-esc:#8a6a1c;
+  --noite:#17120d; --noite2:#241c14;
+  --papel:#f6f1e8; --tinta:#2a2118;
+  --fonte:'Montserrat',system-ui,sans-serif;
+  --serif:'DM Serif Display',Georgia,serif;
+  --grad:linear-gradient(135deg,#f3dc84,#D4AF37 45%,#a5822a);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:400 1rem/1.65 var(--fonte);color:var(--tinta);background:var(--papel)}
+img,svg,iframe{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+.ouro{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec{padding:clamp(3.5rem,8vw,6rem) 0}
+.escuro{background:var(--noite);color:#efe6d6}
+.lede{max-width:56ch;margin-top:1rem;opacity:.85}
+
+/* Botões */
+.btn{display:inline-block;padding:.9rem 1.8rem;border-radius:999px;font-weight:600;text-decoration:none;
+  background:var(--grad);color:var(--noite);border:2px solid transparent;cursor:pointer;font-family:inherit;font-size:1rem;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--linha{background:none;color:var(--ouro);border-color:var(--ouro)}
+.btn--escuro{background:var(--noite);color:var(--ouro)}
+
+/* Cabeçalho */
+.topo{position:sticky;top:0;z-index:50;background:var(--noite);border-bottom:1px solid rgba(212,175,55,.35)}
+.topo__in{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.marca svg{width:34px;height:34px;color:var(--ouro)}
+.marca b{font:400 1.7rem/1 var(--serif)}
+.marca small{display:block;font-size:.62rem;letter-spacing:.14em;color:var(--ouro2)}
+.menu-btn{background:none;border:1px solid var(--ouro);color:var(--ouro);border-radius:8px;padding:.45rem .8rem;font:inherit;cursor:pointer}
+.nav{display:none;position:absolute;inset:100% 0 auto;background:var(--noite);padding:1rem 1.25rem 1.5rem;flex-direction:column;gap:.9rem}
+.nav.aberto{display:flex}
+.nav a{color:#efe6d6;text-decoration:none;font-weight:500}
+.nav a:hover,.nav a[aria-current]{color:var(--ouro)}
+.nav a.btn,.nav a.btn:hover,.nav a.btn[aria-current]{color:var(--noite)}
+@media(min-width:800px){
+  .menu-btn{display:none}
+  .nav{display:flex;position:static;flex-direction:row;align-items:center;gap:2rem;padding:0}
+}
+
+/* Hero */
+.hero{background:radial-gradient(circle at 75% 40%,#2d2317,var(--noite) 60%);color:#efe6d6;padding:clamp(3rem,8vw,6rem) 0}
+.hero__in{display:grid;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.selo{position:relative;width:min(420px,80vw);margin:0 auto}
+.selo img{border-radius:50%;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.selo svg{position:absolute;inset:-6%;width:112%;max-width:none;transform:rotate(-90deg)}
+.selo circle{fill:none;stroke:var(--ouro);stroke-width:.7;stroke-dasharray:302;stroke-dashoffset:302;
+  animation:desenha 2.2s .3s ease-out forwards}
+@keyframes desenha{to{stroke-dashoffset:0}}
+@media(min-width:860px){.hero__in{grid-template-columns:1.2fr 1fr}}
+
+
+/* Renda extra: revendedor parceiro */
+.revenda{background:var(--grad);color:var(--noite);padding:clamp(3.5rem,8vw,6rem) 0;position:relative;overflow:hidden}
+.revenda::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-220px;border-radius:50%;border:2px solid rgba(23,18,13,.18);pointer-events:none}
+.revenda__in{display:grid;gap:2.5rem;align-items:center;position:relative}
+.revenda__tag{display:inline-block;background:var(--noite);color:var(--ouro);font-weight:600;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.1rem}
+.revenda h2{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+.revenda__texto p{max-width:50ch;margin:1rem 0 1.8rem;font-size:1.05rem}
+.revenda__passos{list-style:none;padding:0;display:grid;gap:1rem}
+.revenda__passos li{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.3);border:1px solid rgba(23,18,13,.22);border-radius:16px;padding:1.1rem 1.25rem}
+.revenda__passos b{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--noite);color:var(--ouro);display:grid;place-items:center;font:400 1.4rem/1 var(--serif)}
+.revenda__passos h3{font-size:1.35rem;margin-bottom:.15rem}
+.revenda__passos p{font-size:.92rem}
+@media(min-width:900px){.revenda__in{grid-template-columns:1.1fr 1fr;gap:4rem}}
+
+/* Produtos: lista em formato de cardápio, sem cartões repetidos */
+#produtos{background:var(--papel)}
+.menu-lista{display:grid;gap:0 3.5rem;margin-top:2.5rem}
+.item{display:flex;gap:1.1rem;padding:1.5rem 0;border-top:1px solid var(--ouro2)}
+.item svg{flex:none;width:52px;height:52px;color:var(--ouro-esc)}
+.item h3{font-size:1.5rem}
+.item p{font-size:.95rem;opacity:.8}
+@media(min-width:760px){.menu-lista{grid-template-columns:1fr 1fr}.item--larga{grid-column:1/-1}}
+
+/* Diferenciais */
+.dif{display:grid;gap:2rem;margin-top:2.5rem}
+.dif div{border-left:2px solid var(--ouro);padding-left:1.1rem}
+.dif h3{font-size:1.35rem;color:var(--ouro);margin-bottom:.4rem}
+.dif p{font-size:.95rem;opacity:.85}
+@media(min-width:600px){.dif{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.dif{grid-template-columns:repeat(4,1fr)}}
+
+/* Chamada final */
+.chamada{background:var(--grad);color:var(--noite);text-align:center}
+.chamada p{margin:.8rem auto 1.8rem;max-width:48ch}
+
+/* Rodapé */
+.rodape{background:var(--noite);color:#cfc4b0;padding:3rem 0 5.5rem;font-size:.92rem}
+.rodape__in{display:grid;gap:2rem}
+.rodape h4{font:400 1.2rem var(--serif);color:var(--ouro);margin-bottom:.6rem}
+.rodape ul{list-style:none;padding:0}
+.rodape li{margin:.3rem 0}
+.rodape a{text-decoration:none}
+.rodape a:hover{color:var(--ouro)}
+.rodape .fim{margin-top:2rem;padding-top:1rem;border-top:1px solid rgba(212,175,55,.25);font-size:.8rem}
+@media(min-width:760px){.rodape__in{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+
+/* Botão flutuante do WhatsApp (todas as páginas) */
+.zap{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);animation:pulso 2.4s infinite}
+.zap svg{width:34px;height:34px;flex:none;display:block;fill:currentColor}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .selo circle{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}

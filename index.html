@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q'Massa – Fábrica de Salgados | Coxinhas, quibes e bolinhos</title>
+  <meta name="description" content="Fábrica de salgados no Recife: coxinhas, quibes, bolinhos de queijo e de calabresa, churros para festas, buffets, eventos e revenda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- Ícones dos salgados (reutilizados com <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-coxinha" viewBox="0 0 64 64"><path d="M32 6c10 14 22 26 22 38a22 20 0 0 1-44 0C10 32 22 20 32 6z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 18c5 8 11 15 11 24" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/></symbol>
+  <symbol id="i-quibe" viewBox="0 0 64 64"><path d="M6 32C16 12 48 12 58 32 48 52 16 52 6 32z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 32h28" stroke="currentColor" stroke-width="2" opacity=".5"/></symbol>
+  <symbol id="i-bolinho" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 28q10-8 20 0" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/></symbol>
+  <symbol id="i-calabresa" viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="26" cy="28" r="3" fill="currentColor"/><circle cx="39" cy="34" r="3" fill="currentColor"/><circle cx="28" cy="41" r="3" fill="currentColor"/></symbol>
+  <symbol id="i-churros" viewBox="0 0 64 64"><path d="M14 46 42 18a6 6 0 0 1 8 8L22 54a6 6 0 0 1-8-8z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 36l6 6M32 28l6 6" stroke="currentColor" stroke-width="2" opacity=".5"/></symbol>
+  <symbol id="i-festa" viewBox="0 0 64 64"><circle cx="20" cy="40" r="11" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="44" cy="40" r="11" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+</svg>
+
+<!-- Cabeçalho -->
+<header class="topo">
+  <div class="wrap topo__in">
+    <a class="marca" href="index.html" aria-label="Q'Massa – página inicial">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M18 40c-8-2-10-14-2-17 1-8 12-11 16-4 5-6 16-2 16 6 8 3 6 14-2 15v9H18z"/><path d="M18 49h28"/></svg>
+      <span><b class="ouro">Q'Massa</b><small>Fábrica de Salgados</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a class="btn" href="contato/index.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div>
+        <h1>Sabor caseiro, <span class="ouro">produção de fábrica.</span></h1>
+        <p class="lede">Coxinhas, quibes e bolinhos feitos com padrão artesanal em uma cozinha industrial. Para festas, buffets, eventos e revenda no Recife.</p>
+        <div class="acoes">
+          <a class="btn" href="contato/index.html">Fazer pedido</a>
+          <a class="btn btn--linha" href="#produtos">Ver cardápio</a>
+        </div>
+      </div>
+      <div class="selo">
+        <img src="assets/logo.png" alt="Logomarca Q'Massa – Fábrica de Salgados" width="420" height="420">
+        <!-- Anel dourado que se desenha ao carregar a página -->
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renda extra: revendedor parceiro -->
+  <section class="revenda" id="revendedor" aria-labelledby="rev-titulo">
+    <div class="wrap revenda__in">
+      <div class="revenda__texto">
+        <span class="revenda__tag">Renda extra</span>
+        <h2 id="rev-titulo">Seja um revendedor Q'Massa</h2>
+        <p>Deixa a parte mais difícil com a gente. Nós produzimos os salgados, você vende e fica com o lucro. 
+Uma ótima forma de fazer uma renda extra com um produto que todo mundo gosta.</p>
+        <a class="btn btn--escuro" target="_blank" rel="noopener"
+           href="https://wa.me/558186323398?text=Ol%C3%A1!%20Tenho%20interesse%20em%20ser%20revendedor%20parceiro%20da%20Q%27Massa%20e%20gostaria%20de%20saber%20como%20funciona.">Quero ser revendedor</a>
+      </div>
+      <ul class="revenda__passos">
+        <li><div><h3>Chame no WhatsApp</h3><p>Tire suas dúvidas</p></div></li>
+        <li><div><h3>Venda e lucre</h3><p>Se você já tem um negócio e quer aumentar suas vendas, nosso produto vai alavancar e potencializar seus lucros!!! Entre em contato com nosso time de vendas!</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section class="sec" id="produtos">
+    <div class="wrap">
+      <h2>Nossos salgados</h2>
+      <div class="menu-lista">
+        <article class="item"><svg><use href="#i-coxinha"/></svg><div><h3>Coxinhas</h3><p>Frango, frango com catupiry, carne e outros sabores sob consulta.</p></div></article>
+        <article class="item"><svg><use href="#i-quibe"/></svg><div><h3>Quibes</h3><p>Crocantes por fora, com massa bem temperada.</p></div></article>
+        <article class="item"><svg><use href="#i-bolinho"/></svg><div><h3>Bolinho de queijo</h3><p>Casquinha dourada e recheio de queijo derretido.</p></div></article>
+        <article class="item"><svg><use href="#i-calabresa"/></svg><div><h3>Bolinho de calabresa</h3><p>Sabor marcante, ótimo para petiscos e eventos.</p></div></article>
+        <article class="item"><svg><use href="#i-churros"/></svg><div><h3>Churros</h3><p>Crocantes por fora e macios por dentro, ótimos para festas e eventos.</p></div></article>
+        <article class="item"><svg><use href="#i-festa"/></svg><div><h3>Para festas, buffets, eventos e revenda</h3><p>Cento fechado, combos variados e condições especiais para lanchonetes e revendedores.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section class="sec escuro" id="diferenciais">
+    <div class="wrap">
+      <h2 class="ouro">Por que a Q'Massa</h2>
+      <div class="dif">
+        <div><h3>Higiene rigorosa</h3><p>Cozinha industrial com processos de limpeza e manipulação seguros.</p></div>
+        <div><h3>Padronização</h3><p>Mesmo tamanho, mesmo recheio e mesmo sabor em todo pedido.</p></div>
+        <div><h3>Grande escala</h3><p>Capacidade de produção para revendedores e eventos de qualquer porte.</p></div>
+        <div><h3>Sabor caseiro</h3><p>Receita artesanal com a eficiência de uma fábrica.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="sec chamada">
+    <div class="wrap">
+      <h2>Vamos montar o seu pedido?</h2>
+      <p>Conte o que você precisa e receba o orçamento pelo WhatsApp.</p>
+      <a class="btn btn--escuro" href="contato/index.html">Solicitar orçamento</a>
+    </div>
+  </section>
+</main>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape__in">
+      <div><h4>Q'Massa</h4><p>Fábrica de salgados com sabor caseiro e produção industrial.</p></div>
+      <div><h4>Links</h4><ul><li><a href="index.html">Início</a></li><li><a href="#produtos">Produtos</a></li><li><a href="contato/index.html">Contato</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Rua Mauricéia, 285, Iputinga</li><li>Recife - PE, 50670-480</li><li><a href="tel:+558186323398">(81) 8632-3398</a></li></ul></div>
+      <!-- Troque o "#" pelos links reais das redes sociais -->
+      <div><h4>Redes sociais</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <p class="fim">© <span id="ano">2026</span> Q'Massa – Fábrica de Salgados. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Botão flutuante do WhatsApp -->
+<a class="zap" target="_blank" rel="noopener" aria-label="Falar com a Q'Massa no WhatsApp"
+   href="https://wa.me/558186323398?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Q%27Massa%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20salgados.">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

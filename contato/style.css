@@ -1,0 +1,33 @@
+/* Q'Massa – estilos da página de contato */
+.pagina-topo{background:radial-gradient(circle at 80% 30%,#2d2317,var(--noite) 65%);color:#efe6d6;padding:clamp(2.5rem,6vw,4.5rem) 0}
+.pagina-topo h1{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+
+.contato-grid{display:grid;gap:3rem}
+@media(min-width:900px){.contato-grid{grid-template-columns:1.2fr 1fr}}
+
+/* Formulário */
+.campo{border:0;padding:0;margin-bottom:1.6rem;min-width:0}
+.campo label,.campo legend{display:block;font-weight:600;margin-bottom:.5rem;padding:0}
+input[type=text],textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--ouro2);border-radius:10px;
+  background:#fffdf8;font:inherit;color:var(--tinta)}
+input[type=text]:focus,textarea:focus{outline:3px solid rgba(212,175,55,.45);border-color:var(--ouro-esc)}
+
+/* Opções em formato de pílula (radio e checkbox) */
+.opcoes{display:flex;flex-wrap:wrap;gap:.6rem}
+.pilula{position:relative;margin:0!important;font-weight:500!important}
+.pilula input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.pilula span{display:block;padding:.6rem 1.1rem;border:1.5px solid var(--ouro2);border-radius:999px;background:#fffdf8;transition:background .2s}
+.pilula input:checked+span{background:var(--noite);border-color:var(--noite);color:var(--ouro)}
+.pilula input:focus-visible+span{outline:3px solid var(--ouro);outline-offset:2px}
+
+.erro{color:#a3271b;font-size:.88rem;margin-top:.4rem;min-height:0}
+.erro:empty{display:none}
+[hidden]{display:none!important}
+
+/* Informações e mapa */
+.info h2{font-size:1.9rem;margin-bottom:1rem}
+.info address{font-style:normal;margin-bottom:1rem}
+.info p{margin-bottom:1rem}
+.info a{color:var(--ouro-esc);font-weight:600}
+.mapa{margin:1.2rem 0 .8rem;border:2px solid var(--ouro2);border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0}
